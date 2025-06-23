@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { HeaderStyleOne } from "../components/Layout/Header/HeaderStyleOne";
 import { SiteBreadcrumb } from "../components/Common/Breadcumb/SiteBreadcrumb";
-import { CtaTwo } from "../components/Common/CtaSection/CtaTwo";
 import { BackToTop } from "../components/elements/BackToTop";
 import { Footer } from "../components/Layout/Footer/Footer";
 import bannerbg from '../assets/images/backgrounds/page-header-bg.jpg';
@@ -39,9 +38,6 @@ export const NoPage = () => {
         />
         {/* SiteBreadcrumb */}
         <ErrorMain />
-        {/*cta-section */}
-        <CtaTwo />
-        {/*cta-section end */}
         <BackToTop scroll={isVisible} />
         <Footer />
     </>
