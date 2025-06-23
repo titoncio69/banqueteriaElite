@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export const MenuItems = ({ parentMenu, secondParentMenu, activeMenu }: any) => {
+export const MenuItems = ({ parentMenu, activeMenu }: any) => {
   return (
     <ul className="main-menu__list">
       <li className={parentMenu === 'Home' ? 'dropdown current-menu-item' : ''}>
