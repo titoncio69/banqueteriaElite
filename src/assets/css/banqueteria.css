@@ -2582,7 +2582,7 @@ ul {
   font-size: 96px;
   line-height: 115px;
   font-weight: 700;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: all 200ms linear;
   transition-delay: 0.1s;
   font-family: var(--eventflow-font-two);

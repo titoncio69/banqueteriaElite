@@ -13,7 +13,6 @@ import BannerShape2 from "../../assets/images/shapes/main-slider-shape-2.png";
 import BannerShape3 from "../../assets/images/shapes/main-slider-star-1.png";
 import BannerShape4 from "../../assets/images/shapes/main-slider-star-2.png";
 import BannerShape5 from "../../assets/images/shapes/main-slider-star-3.png";
-import { Link } from "react-router-dom";
 
 
 const swiperOptions: any = {
@@ -65,38 +64,16 @@ export const Banner = () => {
                   <div className="row">
                     <div className="col-xl-12">
                       <div className="main-slider__content">
-                        <p className="main-slider__sub-title">Tania Heresi</p>
+                        <p className="main-slider__sub-title">PRODUCTORA Y BANQUETERIA ELITE</p>
                         <h2 className="main-slider__title">
-                          Banqueteria y Eventos <br /> <span>para un celebracion</span>
+                        UNA EXPERIENCIA DE <br />SABORES   <span> </span>
                         </h2>
                         <p className="main-slider__text">
-                          As an AI language model, I don't have personal opinions or points of view. 
-                          However, I <br /> can tell you that design is a multifaceted field that encompasses various elements.
+                        Desde nuestra fundación hemos sido un referente en el servicio, ofreciendo producciones y <br /> 
+                        soluciones gastronómicas de alta calidad para eventos de todo tipo y en distintas locaciones. <br/>  
+                        A lo largo de estos años, nos hemos destacado por nuestra dedicación al detalle, <br/> 
+                        compromiso con la excelencia y una pasión constante por innovar. 
                         </p>
-                        <ul className="list-unstyled main-slider__address">
-                          <li>
-                            <div className="icon">
-                              <span className="icon-pin"></span>
-                            </div>
-                            <div className="text">
-                              <p>Mirpur 01 Road N 12 Dhaka Bangladesh</p>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="icon">
-                              <span className="icon-clock"></span>
-                            </div>
-                            <div className="text">
-                              <p>10 Am To 10 Pm 20 April 2024</p>
-                            </div>
-                          </li>
-                        </ul>
-                        <div className="main-slider__btn-box">
-                          <Link to="/contact" className="main-slider__btn thm-btn">
-                            Purchase Ticket
-                            <span className="icon-arrow-right"></span>
-                          </Link>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -126,38 +103,17 @@ export const Banner = () => {
                   <div className="row">
                     <div className="col-xl-12">
                       <div className="main-slider__content">
-                        <p className="main-slider__sub-title">Music Festival</p>
+                        <p className="main-slider__sub-title">PRODUCTORA Y BANQUETERIA ELITE</p>
                         <h2 className="main-slider__title">
-                          Discover a World <br /> <span>of Celebration</span>
+                        UNA EXPERIENCIA DE <br />SABORES   <span> </span>
                         </h2>
                         <p className="main-slider__text">
-                          As an AI language model, I don't have personal opinions or points of view. 
-                          However, I <br /> can tell you that design is a multifaceted field that encompasses various elements.
+                        En 2025, celebramos más de una década de éxito y crecimiento continuo. Hemos expandido <br /> 
+                        nuestra oferta, ampliando nuestro abanico de productos y servicios mediante experiencias <br />
+                        que reflejan nuestra evolución como empresa. Nuestro objetivo es hacer de cada celebración <br />
+                        una ocasión inolvidable, brindando atención al detalle, perfección en cada servicio y un <br /> 
+                        ambiente de calidez y cordialidad en todo momento.
                         </p>
-                        <ul className="list-unstyled main-slider__address">
-                          <li>
-                            <div className="icon">
-                              <span className="icon-pin"></span>
-                            </div>
-                            <div className="text">
-                              <p>Mirpur 01 Road N 12 Dhaka Bangladesh</p>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="icon">
-                              <span className="icon-clock"></span>
-                            </div>
-                            <div className="text">
-                              <p>10 Am To 10 Pm 20 April 2024</p>
-                            </div>
-                          </li>
-                        </ul>
-                        <div className="main-slider__btn-box">
-                          <Link to="/contact" className="main-slider__btn thm-btn">
-                            Purchase Ticket
-                            <span className="icon-arrow-right"></span>
-                          </Link>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -187,37 +143,15 @@ export const Banner = () => {
                   <div className="row">
                     <div className="col-xl-12">
                       <div className="main-slider__content">
-                        <p className="main-slider__sub-title">Music Festival</p>
+                        <p className="main-slider__sub-title">PRODUCTORA Y BANQUETERIA ELITE</p>
                         <h2 className="main-slider__title">
-                          Discover a World <br /> <span>of Celebration</span>
+                        UNA EXPERIENCIA DE <br />SABORES   <span> </span>
                         </h2>
                         <p className="main-slider__text">
-                          As an AI language model, I don't have personal opinions or points of view.
-                          However, I <br /> can tell you that design is a multifaceted field that encompasses various elements.
+                        Nos sentimos orgullosos de nuestra trayectoria, de los lazos que hemos formado con <br /> 
+                        grandes clientes y de la confianza que han depositado en nosotros a lo largo de los años. <br />
+                        ¡En PRODUCTORA Y BANQUETERIA ELITE, estamos listos para seguir <br />creando momentos memorables! 
                         </p>
-                        <ul className="list-unstyled main-slider__address">
-                          <li>
-                            <div className="icon">
-                              <span className="icon-pin" />
-                            </div>
-                            <div className="text">
-                              <p>Mirpur 01 Road N 12 Dhaka Bangladesh</p>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="icon">
-                              <span className="icon-clock" />
-                            </div>
-                            <div className="text">
-                              <p>10 Am To 10 Pm 20 April 2024</p>
-                            </div>
-                          </li>
-                        </ul>
-                        <div className="main-slider__btn-box">
-                          <Link to="/contact" className="main-slider__btn thm-btn">
-                            Purchase Ticket <span className="icon-arrow-right" />
-                          </Link>
-                        </div>
                       </div>
                     </div>
                   </div>
