@@ -8,8 +8,8 @@ export const SlidingText = () => {
           <div className="sliding-text-one__wrap">
           <ul className="sliding-text__list marquee_mode">
               <li>
-              <h2 data-hover="Elite" className="sliding-text__title">
-                  Elite
+              <h2 data-hover="ELITE" className="sliding-text__title">
+                  ELITE
                   <img src={slideLogo1} alt="Star Icon" />
               </h2>
               </li>
@@ -20,8 +20,8 @@ export const SlidingText = () => {
               </h2>
               </li>
               <li>
-              <h2 data-hover="Elite" className="sliding-text__title">
-                  Elite
+              <h2 data-hover="ELITE" className="sliding-text__title">
+              ELITE
                   <img src={slideLogo1} alt="Star Icon" />
               </h2>
               </li>
@@ -32,8 +32,8 @@ export const SlidingText = () => {
               </h2>
               </li>
               <li>
-              <h2 data-hover="Elite" className="sliding-text__title">
-                  Elite
+              <h2 data-hover="ELITE" className="sliding-text__title">
+              ELITE
                   <img src={slideLogo1} alt="Star Icon" />
               </h2>
               </li>

@@ -64,7 +64,7 @@ export const MenuItems = ({ parentMenu, activeMenu }: any) => {
         </ul> */}
       </li>
       <li className={parentMenu === 'Pages' ? 'dropdown current-menu-item' : ''}>
-        <Link to="/about">Quienes Somos</Link>
+        <Link to="/about">Nosotros</Link>
         {/* <ul className="sub-menu">
           <li>
             <Link to="/about" className={activeMenu === '/about' ? 'active-menu' : ''}>

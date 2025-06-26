@@ -32,8 +32,8 @@ export const AboutPage = () => {
       />
       {/* SiteBreadcrumb */}
       <SiteBreadcrumb
-        pageTitle="Quienes Somos"
-        pageName="Quienes Somos"
+        pageTitle="Nosotros"
+        pageName="Nosotros"
         breadcrumbsImg={bannerbg}
       />
       {/* SiteBreadcrumb */}
