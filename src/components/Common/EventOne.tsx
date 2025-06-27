@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-export const EventOne = ({ tagline, title, buttonText, points, imageUrl }: any) => {
+export const EventOne = ({ tagline, title, points, imageUrl }: any) => {
   return (
     <section className="event-one event-three">
       <div className="container">
@@ -12,25 +12,20 @@ export const EventOne = ({ tagline, title, buttonText, points, imageUrl }: any) 
               </div>
               <h2 className="section-title__title">{title}</h2>
             </div>
-            <div className="event-one__btn-box">
-              <Link to="/event-details" className="event-one__btn thm-btn">
-                  {buttonText} <span className="icon-arrow-right"></span>
-              </Link>
-            </div>
           </div>
           <ul className="list-unstyled event-one__points">
             {points.map((point: any, index: any) => (
               <li key={index}>
-                <div className="icon">
+                <div className="icon" style={{ marginBottom: '20px' }}>
                   <span className={point.icon}></span>
                 </div>
                 <div className="content">
                   <h4>
-                    <Link to="/event">
+                    <Link to="#">
                       {point.heading}
                     </Link>
                   </h4>
-                  <p>{point.description}</p>
+                  {/* <p>{point.description}</p> */}
                 </div>
               </li>
             ))}
