@@ -113,9 +113,9 @@ export const MenuItems = ({ parentMenu, activeMenu }: any) => {
           </li>
         </ul> */}
       </li>
-      <li className={parentMenu === 'Team' ? 'dropdown current-menu-item' : ''}>
+      {/* <li className={parentMenu === 'Team' ? 'dropdown current-menu-item' : ''}>
         <Link to="/team">Nuestro Equipo</Link>
-      </li>
+      </li> */}
       <li className={parentMenu === 'Services' ? 'dropdown current-menu-item' : ''}>
         <Link to="/services">Servicios</Link>
         {/* <ul className="sub-menu">
