@@ -7174,6 +7174,19 @@ ul {
   float: none;
 }
 
+/* Estilo para las opciones desplegadas */
+.contact-one__input-box select.selectmenu.wide option {
+  background-color: #fff; /* Fondo de cada opción */
+  color: #333;            /* Texto oscuro para cada opción */
+}
+
+/* Opcional: Hover y opción seleccionada */
+.contact-one__input-box select.selectmenu.wide option:hover,
+.contact-one__input-box select.selectmenu.wide option:checked {
+  background-color: #f0f0f0; /* Suave gris al pasar el mouse */
+  color: #000;
+}
+
 .contact-one__input-box .nice-select:after {
   position: absolute;
   top: 21px;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import Footershape from '../../../assets/images/shapes/site-footer-shape-1.png';
+// import Footershape from '../../../assets/images/shapes/site-footer-shape-1.png';
 import footerLogo from '../../../assets/images/resources/site-footer-logo-1.png';
 
 
@@ -8,9 +8,9 @@ export const Footer = () => {
     <>
     {/* Site Footer Start */}
     <footer className="site-footer">
-        <div className="site-footer__shape-1 float-bob-y">
+        {/* <div className="site-footer__shape-1 float-bob-y">
             <img src={Footershape} alt="" />
-        </div>
+        </div> */}
         <div className="site-footer__top">
             <div className="container">
                 <div className="site-footer__top-inner">
