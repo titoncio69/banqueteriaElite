@@ -32,8 +32,8 @@ export const ServicesPage = () => {
         />
         {/* SiteBreadcrumb */}
         <SiteBreadcrumb
-            pageTitle="Servicios"
-            pageName="Servicios"
+            pageTitle="Productos y Servicios"
+            pageName="Productos y Servicios"
             breadcrumbsImg={bannerbg}
         />
         {/* SiteBreadcrumb */}
