@@ -1,6 +1,24 @@
 import { Link } from "react-router-dom"
 
 export const ContactMain = () => {
+
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const res = await fetch("/assets/inc/sendemail.php", {
+        method: "POST",
+        body: formData,
+      });
+      const json = await res.json();
+      alert(json.mensaje); // reemplázalo por tu propio toast o modal
+      e.currentTarget.reset(); // limpia el formulario si todo salió bien
+    } catch (err) {
+      alert("Ocurrió un error al enviar el mensaje. Intenta nuevamente.");
+    }
+  };
+
   return (
     <>
         {/*Contact One Start*/}
@@ -14,6 +32,7 @@ export const ContactMain = () => {
                 <form
                   className="contact-form-validated contact-one__form"
                   action="assets/inc/sendemail.php"
+                  onSubmit={handleSubmit}
                   method="post"
                   noValidate
                 >
@@ -51,7 +70,7 @@ export const ContactMain = () => {
                     <div className="col-xl-6 col-lg-6">
                       <div className="contact-one__input-box">
                         <div className="select-box">
-                          <select className="selectmenu wide" defaultValue="Choose Option">
+                          <select className="selectmenu wide" name="subject" defaultValue="Choose Option">
                             <option value="Choose Option">Escoja una opción</option>
                             <option value="Consulta">Consulta</option>
                             <option value="Reclamo">Reclamo</option>
