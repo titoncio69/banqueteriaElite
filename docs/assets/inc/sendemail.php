@@ -1,78 +1,70 @@
 <?php
-/**************************************************
- * CONFIGURACIÓN DE TU CUENTA DE CORREO
- **************************************************/
-// $SMTP_HOST     = 'mail.productoraybanqueteriaelite.cl'; // Normalmente "mail." + tu dominio
-$SMTP_HOST     = 'blue201.dnsmisitio.net'; // Normalmente "mail." + tu dominio
-$SMTP_USER     = 'contacto@productoraybanqueteriaelite.cl';
-$SMTP_PASSWORD = 'Gujxf+%_G_qc'; // Contraseña de tu cuenta de correo
-$SMTP_PORT     = 465;  // 465 = SMTPS, 587 = STARTTLS
-$SMTP_SECURE   = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
-$TO_ADDRESS    = 'contacto@productoraybanqueteriaelite.cl'; // Destino de los mensajes
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Content-Type: application/json; charset=utf-8");
 
-/**************************************************
- * INCLUIR PHPMailer SIN COMPOSER
- **************************************************/
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $to = "contacto@productoraybanqueteriaelite.cl";
+    $from = "formularioweb@productoraybanqueteriaelite.cl";
 
-require __DIR__ . '/PHPMailer/src/Exception.php';
-require __DIR__ . '/PHPMailer/src/PHPMailer.php';
-require __DIR__ . '/PHPMailer/src/SMTP.php';
+    $name = htmlspecialchars($_POST['name']);
+    $email = htmlspecialchars($_POST['email']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $subject = htmlspecialchars($_POST['subject']);
+    $message = htmlspecialchars($_POST['message']);
 
-/**************************************************
- * LIMPIAR Y VALIDAR LOS DATOS DEL FORMULARIO
- **************************************************/
-$nombre  = filter_input(INPUT_POST, 'name',    FILTER_SANITIZE_SPECIAL_CHARS);
-$email   = filter_input(INPUT_POST, 'email',   FILTER_VALIDATE_EMAIL);
-$fono    = filter_input(INPUT_POST, 'phone',   FILTER_SANITIZE_SPECIAL_CHARS);
-$asunto  = filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS);
-$mensaje = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_SPECIAL_CHARS);
+    // Generar código de seguimiento
+    $timestamp = date("YmdHis"); // Formato YYYYMMDDHHmmSS
+    $code = strtoupper(substr(preg_replace("/[^A-Za-z0-9]/", "", $subject), 0, 6)); // Extraer primeras 6 letras/números del asunto
+    $nameCode = strtoupper(substr(preg_replace("/[^A-Za-z0-9]/", "", $name), 0, 4)); // Extraer primeras 4 letras del nombre
+    $tracking_code = "{$code}{$timestamp}-{$nameCode}";
+    $hash_tracking_code = hash("sha256", $tracking_code); // Aplica SHA-256 para seguridad
 
-if (!$nombre || !$email || !$fono || !$mensaje) {
-  http_response_code(422);
-  echo json_encode(['estado' => 'error', 'mensaje' => 'Faltan datos obligatorios.']);
-  exit;
+    $headers = "From: $from\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "MIME-Version: 1.0\r\n";
+
+    $boundary = md5(time());
+    $headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"\r\n";
+
+    // Cuerpo del email
+    $email_body = "--$boundary\r\n";
+    $email_body .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $email_body .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
+    $email_body .= "<html><body>";
+    $email_body .= "<h2>Nuevo mensaje de contacto</h2>";
+    $email_body .= "<p><strong>Nombre:</strong> $name</p>";
+    $email_body .= "<p><strong>Correo Electrónico:</strong> $email</p>";  
+    $email_body .= "<p><strong>Telefono:</strong> $phone</p>";  
+    $email_body .= "<p><strong>Asunto:</strong> $subject</p>";
+    $email_body .= "<p><strong>Mensaje:</strong></p><p>$message</p>";
+    $email_body .= "<p><strong>Código de Seguimiento:</strong> $hash_tracking_code</p>";
+    $email_body .= "</body></html>\r\n";
+
+    // Adjuntar archivo si existe
+    if (!empty($_FILES['file']['tmp_name'])) {
+        $file = $_FILES['file']['tmp_name'];
+        $file_name = $_FILES['file']['name'];
+        $file_type = $_FILES['file']['type'];
+        $file_content = chunk_split(base64_encode(file_get_contents($file)));
+
+        $email_body .= "--$boundary\r\n";
+        $email_body .= "Content-Type: $file_type; name=\"$file_name\"\r\n";
+        $email_body .= "Content-Disposition: attachment; filename=\"$file_name\"\r\n";
+        $email_body .= "Content-Transfer-Encoding: base64\r\n\r\n";
+        $email_body .= $file_content . "\r\n";
+    }
+
+    $email_body .= "--$boundary--";
+
+    // Envío del email
+    if (mail($to, "Nuevo mensaje de contacto", $email_body, $headers)) {
+        echo json_encode(["status" => "success", "tracking_code" => $hash_tracking_code]);
+    } else {
+        echo json_encode(["status" => "error", "message" => "Error al enviar correo"]);
+    }
+} else {
+    http_response_code(405);
 }
-
-/**************************************************
- * ARMAR Y ENVIAR EL CORREO
- **************************************************/
-$mail = new PHPMailer(true);
-
-try {
-  // Ajustes SMTP
-  $mail->isSMTP();
-  $mail->Host       = $SMTP_HOST;
-  $mail->SMTPAuth   = true;
-  $mail->Username   = $SMTP_USER;
-  $mail->Password   = $SMTP_PASSWORD;
-  $mail->Port       = $SMTP_PORT;
-  $mail->SMTPSecure = $SMTP_SECURE;
-
-  // Remitente y destinatario
-  $mail->setFrom($SMTP_USER, 'Formulario Web');
-  $mail->addAddress($TO_ADDRESS);
-
-  // Contenido
-  $mail->isHTML(true);
-  $mail->Subject = "[$asunto] Mensaje de $nombre ($fono)";
-  $mail->Body    = "
-    <h2>Mensaje desde el formulario de contacto</h2>
-    <p><strong>Nombre:</strong>  $nombre<br>
-       <strong>Email:</strong>   $email<br>
-       <strong>Teléfono:</strong> $fono<br>
-       <strong>Tipo:</strong>    $asunto</p>
-    <p>$mensaje</p>";
-
-  $mail->AltBody = "Nombre: $nombre\nEmail: $email\nTeléfono: $fono\nTipo: $asunto\n\n$mensaje";
-
-  $mail->send();
-  echo json_encode(['estado' => 'ok', 'mensaje' => '¡Mensaje enviado con éxito!']);
-} catch (Exception $e) {
-  http_response_code(500);
-  echo json_encode([
-    'estado'  => 'error',
-    'mensaje' => 'No se pudo enviar el mensaje. Error: ' . $mail->ErrorInfo
-  ]);
-}
+?>
