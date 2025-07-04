@@ -20,19 +20,18 @@ export const ContactMain = () => {
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-    e.stopPropagation(); // plan B
+    e.stopPropagation();           // <- IMPORTANTE para que el plugin no se ejecute
 
     const data = new FormData();
     Object.entries(formData).forEach(([k, v]) => data.append(k, v));
 
     try {
-      const res = await fetch("/assets/inc/sendemail.php", {
-        method: "POST",
-        body: data,
-      });
+      const res = await fetch("/send_email.php", { method: "POST", body: data });
       const json = await res.json();
+
       if (json.status === "success") {
-        await Swal.fire("Mensaje enviado 🙌", "¡Gracias por contactarnos!", "success");
+        Swal.fire("Mensaje enviado 🙌", "¡Gracias por contactarnos!", "success");
+        /* Limpia el formulario */
         setFormData({ name: "", email: "", phone: "", subject: "ChooseOption", message: "" });
       } else {
         throw new Error(json.message || "Error al enviar el mensaje.");
@@ -40,8 +39,6 @@ export const ContactMain = () => {
     } catch (err: any) {
       Swal.fire("No se pudo enviar", err.message, "error");
     }
-
-    return false;
   };
 
 
@@ -56,9 +53,9 @@ export const ContactMain = () => {
               Para consultas y más información, escríbenos un mensaje.
             </p>
             <form
+              // className="contact-form-validated contact-one__form"
               className="contact-one__form"
-              onSubmitCapture={handleSubmit}
-              action="#"
+              onSubmit={handleSubmit}
               noValidate
             >
               <div className="row">
@@ -67,6 +64,17 @@ export const ContactMain = () => {
                     <input type="text" name="name" placeholder="Nombre" required value={formData.name} onChange={handleChange} />
                   </div>
                 </div>
+
+                {/* <div className="col-xl-6 col-lg-6">
+                      <div className="contact-one__input-box">
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Nombre"
+                          required
+                        />
+                      </div>
+                    </div> */}
 
                 <div className="col-xl-6 col-lg-6">
                   <div className="contact-one__input-box">
