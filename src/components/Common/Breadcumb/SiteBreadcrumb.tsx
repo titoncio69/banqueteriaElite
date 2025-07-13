@@ -14,13 +14,13 @@ export const SiteBreadcrumb = (props: any) => {
                 <div
                     className="page-header__bg"
                     style={breadcrumbsImgStyle}></div>
-                <div className="container">
+                <div>
                     <div className="page-header__inner">
                         <h2>{pageTitle ? pageTitle : 'Breadcrumbs'}</h2>
                         <div className="thm-breadcrumb__box">
-                            <ul className="thm-breadcrumb list-unstyled">
+                      {/*      <ul className="thm-breadcrumb list-unstyled">
                                 <li>
-                                    <Link to="/" className="active">{parentCategory ? parentCategory : 'Inicio'}</Link>
+                                 <Link to="/" className="active">{parentCategory ? parentCategory : 'Inicio'}</Link> *
                                 </li>
                                 <li><span className="icon-angle-left"></span></li>
                                 {pageCategory ? (
@@ -34,7 +34,7 @@ export const SiteBreadcrumb = (props: any) => {
                                 ) : (
                                     <li>{pageName ? pageName : 'Page Name'}</li>
                                 )}
-                            </ul>
+                            </ul> */}
                         </div>
                     </div>
                 </div>
