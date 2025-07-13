@@ -1361,7 +1361,7 @@ ul {
 
 .mobile-nav__contact li {
   color: var(--eventflow-text-dark);
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 500;
   position: relative;
   display: -webkit-box;

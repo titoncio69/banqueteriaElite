@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"
 import Swal from "sweetalert2";
 
 export const ContactMain = () => {
@@ -107,14 +106,12 @@ export const ContactMain = () => {
         </div>
       </section>
       {/*Contact One End*/}
-
-      {/*Contact Two Start*/}
       <section className="contact-two">
         <div className="container">
-          <div className="row">
-            {/* Contact Two Single Start */}
-            <div className="col-xl-4 col-lg-4">
-              <div className="contact-two__single">
+          <div className="row align-items-stretch">
+            {/* Ubicación */}
+            <div className="col-xl-4 col-lg-4 d-flex">
+              <div className="contact-two__single w-100">
                 <div className="contact-two__icon">
                   <span className="icon-pin"></span>
                 </div>
@@ -124,40 +121,37 @@ export const ContactMain = () => {
                 </p>
               </div>
             </div>
-            {/* Contact Two Single End */}
 
-            {/* Contact Two Single Start */}
-            <div className="col-xl-4 col-lg-4">
-              <div className="contact-two__single">
+            {/* Email */}
+            <div className="col-xl-4 col-lg-4 d-flex">
+              <div className="contact-two__single w-100">
                 <div className="contact-two__icon">
                   <span className="icon-paper-plan"></span>
                 </div>
                 <h3 className="contact-two__title">E-mail</h3>
                 <p className="contact-two__text">
-                  <Link to="mailto:contacto@banqueteriaelite.cl">
-                    contacto@banqueteriaelite.cl
-                  </Link>
+                  <a href="mailto:contacto@productoraybanqueteriaelite.cl">
+                    contacto@productoraybanqueteriaelite.cl
+                  </a>
                 </p>
               </div>
             </div>
-            {/* Contact Two Single End */}
 
-            {/* Contact Two Single Start */}
-            <div className="col-xl-4 col-lg-4">
-              <div className="contact-two__single">
+            {/* Teléfonos */}
+            <div className="col-xl-4 col-lg-4 d-flex">
+              <div className="contact-two__single w-100">
                 <div className="contact-two__icon">
                   <span className="icon-call"></span>
                 </div>
-                <h3 className="contact-two__title">Telefonos</h3>
-                <p className="contact-two__text">
-                  <ul className="list-unstyled">
+                <h3 className="contact-two__title">Teléfonos</h3>
+                <div className="contact-two__text">
+                  <ul className="list-unstyled mb-0">
                     <li>Jaqueline Sazo: <a href="tel:+56953868576">+569 5386 8576</a></li>
                     <li>Tania Heresi: <a href="tel:+56995403556">+569 9540 3556</a></li>
                   </ul>
-                </p>
+                </div>
               </div>
             </div>
-            {/* Contact Two Single End */}
           </div>
         </div>
       </section>
