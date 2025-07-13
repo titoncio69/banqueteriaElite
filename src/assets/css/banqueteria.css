@@ -2614,17 +2614,18 @@ ul {
 
 @keyframes marquee {
   0% {
-    transform: translateX(50%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
 .marquee_mode {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 80s linear infinite;
+  animation: marquee 40s linear infinite;
+  will-change: transform;
 }
 
 .sliding-text__title img {
