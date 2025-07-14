@@ -3,27 +3,27 @@ import { Link } from "react-router-dom";
 import MobileLogo from '../../../assets/images/resources/logo-1.png'
 
 export const MobileMenu = ({ isSidebar, handleMobileMenu, handleSidebar }: any) => {
-    const [isActive, setIsActive] = useState({
+    const [isActive] = useState({
         status: false,
         key: "",
         subMenuKey: "",
       });
     
-      const handleToggle = (key: any, subMenuKey = "") => {
-        if (isActive.key === key && isActive.subMenuKey === subMenuKey) {
-          setIsActive({
-            status: false,
-            key: "",
-            subMenuKey: "",
-          });
-        } else {
-          setIsActive({
-            status: true,
-            key,
-            subMenuKey,
-          });
-        }
-      };
+      // const handleToggle = (key: any, subMenuKey = "") => {
+      //   if (isActive.key === key && isActive.subMenuKey === subMenuKey) {
+      //     setIsActive({
+      //       status: false,
+      //       key: "",
+      //       subMenuKey: "",
+      //     });
+      //   } else {
+      //     setIsActive({
+      //       status: true,
+      //       key,
+      //       subMenuKey,
+      //     });
+      //   }
+      // };
   return (
     <>
       {/*End Mobile Menu */}

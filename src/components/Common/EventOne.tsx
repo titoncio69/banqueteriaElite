@@ -1,7 +1,4 @@
 import { Link } from "react-router-dom"
-import shape1 from '../../assets/images/shapes/main-slider-star-1.png';
-
-
 
 export const EventOne = ({ tagline, title, points, imageUrl }: any) => {
   return (

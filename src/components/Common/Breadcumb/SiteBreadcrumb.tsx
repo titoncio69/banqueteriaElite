@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 
 export const SiteBreadcrumb = (props: any) => {
-    const { pageTitle, parentCategory, pageCategory, pageName, breadcrumbsImg } = props;
+    const { pageTitle, breadcrumbsImg } = props;
 
     const breadcrumbsImgStyle = {
         backgroundImage: `url(${breadcrumbsImg})`
@@ -18,23 +17,6 @@ export const SiteBreadcrumb = (props: any) => {
                     <div className="page-header__inner">
                         <h2>{pageTitle ? pageTitle : 'Breadcrumbs'}</h2>
                         <div className="thm-breadcrumb__box">
-                      {/*      <ul className="thm-breadcrumb list-unstyled">
-                                <li>
-                                 <Link to="/" className="active">{parentCategory ? parentCategory : 'Inicio'}</Link> *
-                                </li>
-                                <li><span className="icon-angle-left"></span></li>
-                                {pageCategory ? (
-                                    <>
-                                        <li>
-                                            <Link to="/" className="active">{pageCategory}</Link>
-                                        </li>
-
-                                        <li>{pageName ? pageName : 'Page Name'}</li>
-                                    </>
-                                ) : (
-                                    <li>{pageName ? pageName : 'Page Name'}</li>
-                                )}
-                            </ul> */}
                         </div>
                     </div>
                 </div>
