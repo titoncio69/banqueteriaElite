@@ -6,6 +6,7 @@ import { Footer } from "../components/Layout/Footer/Footer";
 import navImg1 from '../assets/images/resources/logo-1.png';
 import bannerbg from '../assets/images/backgrounds/page-header-bg.jpg';
 import { GalleryMain } from "./gallery/GalleryMain";
+import { SlidingText } from "./home/SlidingText";
 
 export const GalleryPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -38,6 +39,8 @@ export const GalleryPage = () => {
       />
       {/* SiteBreadcrumb */}
       <GalleryMain />
+      {/* <BrandOne /> */}
+      <SlidingText />
       <BackToTop scroll={isVisible} />
       <Footer />
     </>

@@ -6,6 +6,7 @@ import { SiteBreadcrumb } from "../components/Common/Breadcumb/SiteBreadcrumb";
 import { BackToTop } from "../components/elements/BackToTop";
 import { Footer } from "../components/Layout/Footer/Footer";
 import { ContactMain } from "./contact/ContactMain";
+import { SlidingText } from "./home/SlidingText";
 
 export const ContactPage = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -38,6 +39,7 @@ export const ContactPage = () => {
             />
             {/* SiteBreadcrumb */}
             <ContactMain />
+            <SlidingText />
             <BackToTop scroll={isVisible} />
             <Footer />
         </>

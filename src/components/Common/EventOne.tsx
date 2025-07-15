@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom"
 
-
-
 export const EventOne = ({ tagline, title, points, imageUrl, imageUrl2 }: any) => {
   return (
     <section className="event-one event-three" >

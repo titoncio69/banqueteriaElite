@@ -6,11 +6,13 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // Import local images
-import BrandImg1 from '../../assets/images/brand/derco.png';
-import BrandImg2 from '../../assets/images/brand/idemia.png';
-import BrandImg3 from '../../assets/images/brand/inchcape.png';
-import BrandImg4 from '../../assets/images/brand/kia.png';
-import BrandImg5 from '../../assets/images/brand/reale.png';
+import BrandImg1 from '../../assets/images/brand/derco2.png';
+import BrandImg2 from '../../assets/images/brand/idemia2.png';
+import BrandImg3 from '../../assets/images/brand/inchcape2.png';
+import BrandImg4 from '../../assets/images/brand/kia2.png';
+import BrandImg5 from '../../assets/images/brand/reale2.png';
+import BrandImg6 from '../../assets/images/brand/consorcio2.png';
+import BrandImg7 from '../../assets/images/brand/grifols2.png';
 
 // Swiper options
 const swiperOptions: any = {
@@ -71,11 +73,15 @@ const swiperOptions: any = {
     { src: BrandImg3, alt: 'Brand 3' },
     { src: BrandImg4, alt: 'Brand 4' },
     { src: BrandImg5, alt: 'Brand 5' },
-    { src: BrandImg1, alt: 'Brand 6' },
-    { src: BrandImg2, alt: 'Brand 7' },
-    { src: BrandImg3, alt: 'Brand 8' },
-    { src: BrandImg4, alt: 'Brand 9' },
-    { src: BrandImg5, alt: 'Brand 10' },
+    { src: BrandImg6, alt: 'Brand 6' },
+    { src: BrandImg7, alt: 'Brand 7' },
+    { src: BrandImg1, alt: 'Brand 8' },
+    { src: BrandImg2, alt: 'Brand 9' },
+    { src: BrandImg3, alt: 'Brand 10' },
+    { src: BrandImg4, alt: 'Brand 11' },
+    { src: BrandImg5, alt: 'Brand 12' },
+    { src: BrandImg6, alt: 'Brand 13' },
+    { src: BrandImg7, alt: 'Brand 14' },
   ];
 
 export const BrandOne = () => {
