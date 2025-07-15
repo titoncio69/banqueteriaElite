@@ -15,7 +15,11 @@ export const ServicesPage = ({ services }: any) => {
               >
                 <div className="services-one__single h-100 d-flex flex-column">
                   <div className="services-one__icon">
-                    <span className={service.icon}></span>
+                      {service.image ? (
+                        <img src={service.image} alt={service.title} style={{ width: 90, height: 90, objectFit: 'contain' }} />
+                      ) : (
+                        <span className={service.icon}></span>
+                      )}
                   </div>
                   <h3 className="services-one__title">
                     {/* <Link to={service.link}>{service.title}</Link> */}

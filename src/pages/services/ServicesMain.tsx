@@ -1,5 +1,9 @@
 import { ServicesPage } from "../../components/Services/ServicesPage";
 import pdfProductosyServicios from '../../assets/pdfs/productos_y_servicios.pdf';
+import icoProduct1 from '../../assets/images/resources/ico-product-1.png';
+import icoProduct2 from '../../assets/images/resources/ico-product-2.png';
+import icoProduct3 from '../../assets/images/resources/ico-product-3.png';
+
 
 export const ServicesMain = () => {
     const servicesData = [
@@ -16,7 +20,7 @@ export const ServicesMain = () => {
             "Arriendo de Mobiliario"
           ],
           pdf: pdfProductosyServicios,
-          icon: "icon-camera",
+          image: icoProduct1,
           wowDelay: "100ms",
         },
         {
@@ -26,7 +30,7 @@ export const ServicesMain = () => {
           link: "stellar-events-co",
           // 👉 apunta directamente al PDF en la carpeta **public/pdfs**
       // pdf: "/pdfs/event-prodigy.pdf",
-          icon: "icon-skewer",
+          image: icoProduct2,
           wowDelay: "200ms",
         },
         {
@@ -34,7 +38,7 @@ export const ServicesMain = () => {
           title: "La Lonchera",
           description: "Lleva la energía directamente a tu lugar de trabajo con nuestro Carrito de Oficina, un práctico y atractivo servicio móvil diseñado para ofrecer una variedad de snacks, sándwiches, almuerzos y bebestibles ideales para esos momentos de pausa, reuniones, etc.",
           link: "elite-event-management",
-          icon: "icon-dinner-table",
+          image: icoProduct3,
           wowDelay: "300ms",
         },
       ];
