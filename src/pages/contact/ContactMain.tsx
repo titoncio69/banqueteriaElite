@@ -46,7 +46,6 @@ export const ContactMain = () => {
 
   return (
     <>
-      {/*Contact One Start*/}
       <section className="contact-one">
         <div className="container">
           <div className="contact-one__inner">
@@ -101,15 +100,12 @@ export const ContactMain = () => {
                 </div>
               </div>
             </form>
-            {/* <div className="result"></div> */}
           </div>
         </div>
       </section>
-      {/*Contact One End*/}
       <section className="contact-two">
         <div className="container">
           <div className="row align-items-stretch">
-            {/* Ubicación */}
             <div className="col-xl-4 col-lg-4 d-flex">
               <div className="contact-two__single w-100">
                 <div className="contact-two__icon">
@@ -122,7 +118,6 @@ export const ContactMain = () => {
               </div>
             </div>
 
-            {/* Email */}
             <div className="col-xl-4 col-lg-4 d-flex">
               <div className="contact-two__single w-100">
                 <div className="contact-two__icon">
@@ -137,7 +132,6 @@ export const ContactMain = () => {
               </div>
             </div>
 
-            {/* Teléfonos */}
             <div className="col-xl-4 col-lg-4 d-flex">
               <div className="contact-two__single w-100">
                 <div className="contact-two__icon">
@@ -155,7 +149,6 @@ export const ContactMain = () => {
           </div>
         </div>
       </section>
-      {/*Contact Two End*/}
     </>
   )
 }

@@ -30,13 +30,11 @@ export const NoPage = () => {
             parentMenu='error'
             activeMenu="/error"
         />
-        {/* SiteBreadcrumb */}
         <SiteBreadcrumb
             pageTitle="404 Error"
             pageName="404 Error"
             breadcrumbsImg={bannerbg}
         />
-        {/* SiteBreadcrumb */}
         <ErrorMain />
         <BackToTop scroll={isVisible} />
         <Footer />

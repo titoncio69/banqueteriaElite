@@ -94,7 +94,6 @@ export const SlidingText = () => {
           </ul>
           </div>
       </section>
-      {/* Sliding Text End */}
     </>
   )
 }

@@ -31,15 +31,12 @@ export const ServicesPage = () => {
             parentMenu='services'
             activeMenu="/services"
         />
-        {/* SiteBreadcrumb */}
         <SiteBreadcrumb
             pageTitle="Productos y Servicios"
             pageName="Productos y Servicios"
             breadcrumbsImg={bannerbg}
         />
-        {/* SiteBreadcrumb */}
         <ServicesMain />
-        {/* <BrandOne /> */}
         <SlidingText />
         <BackToTop scroll={isVisible} />
         <Footer />

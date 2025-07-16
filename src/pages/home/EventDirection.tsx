@@ -15,7 +15,6 @@ export const EventDirection = () => {
   });
   return (
     <>
-      {/* Event Direction Start */}
       <section className="event-direction">
         <div className="container">
           <div className="event-direction__inner">
@@ -110,7 +109,6 @@ export const EventDirection = () => {
           </div>
         </div>
       </section>
-      {/* Event Direction End */}
     </>
   )
 }

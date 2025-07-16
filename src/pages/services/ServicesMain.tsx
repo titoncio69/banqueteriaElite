@@ -44,9 +44,7 @@ export const ServicesMain = () => {
       ];
   return (
     <>
-        {/*Services Page Start*/}
         <ServicesPage services={servicesData} />
-        {/*Services Page End*/}
     </>
   )
 }

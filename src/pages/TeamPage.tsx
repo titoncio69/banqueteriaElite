@@ -31,13 +31,11 @@ export const TeamPage = () => {
             parentMenu='team'
             activeMenu="/team"
         />
-        {/* SiteBreadcrumb */}
         <SiteBreadcrumb
             pageTitle="Equipo"
             pageName="Equipo"
             breadcrumbsImg={bannerbg}
         />
-        {/* SiteBreadcrumb */}
         <TeamMain />
         <BackToTop scroll={isVisible} />
         <Footer />

@@ -31,7 +31,6 @@ export const ServicesOne = () => {
       });
   return (
     <>
-      {/* Services One Start */}
       <section id="th-service" className="services-one">
         <div className="container">
           <div className="section-title text-center">
@@ -60,7 +59,6 @@ export const ServicesOne = () => {
           </div>
         </div>
       </section>
-      {/* Services One End */}
     </>
   )
 }

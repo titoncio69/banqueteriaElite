@@ -31,7 +31,6 @@ export const EventOne = () => {
   });
   return (
     <>
-      {/* Event One Start */}
       <section id="th-about" className="event-one">
         <div className="container">
           <div
@@ -79,7 +78,6 @@ export const EventOne = () => {
           </div>
         </div>
       </section>
-      {/* Event One End */}
     </>
   )
 }

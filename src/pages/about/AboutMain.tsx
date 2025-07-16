@@ -91,9 +91,7 @@ export const AboutMain = () => {
         </div>
       </section>
 
-      {/*Brand One Start*/}
       <BrandOne />
-      {/*Brand One End*/}
 
     </>
   )

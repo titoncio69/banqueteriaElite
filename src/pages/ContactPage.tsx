@@ -31,13 +31,11 @@ export const ContactPage = () => {
                 parentMenu='contact'
                 activeMenu="/contact"
             />
-            {/* SiteBreadcrumb */}
             <SiteBreadcrumb
                 pageTitle="Contactanos"
                 pageName="Contactanos"
                 breadcrumbsImg={bannerbg}
             />
-            {/* SiteBreadcrumb */}
             <ContactMain />
             <SlidingText />
             <BackToTop scroll={isVisible} />

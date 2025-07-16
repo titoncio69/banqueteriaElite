@@ -41,7 +41,6 @@ export const TeamOne = () => {
   });
   return (
     <>
-      {/* Team One Start */}
       <section id="th-team" className="team-one">
         <div className="container">
           <div className="section-title text-center">
@@ -91,7 +90,6 @@ export const TeamOne = () => {
           </div>
         </div>
       </section>
-      {/* Team One End */}
     </>
   )
 }

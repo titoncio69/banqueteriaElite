@@ -18,7 +18,6 @@ export const BuyTicket = () => {
 
   return (
     <>
-      {/* Buy Ticket Start */}
       <section className="buy-ticket">
         <div className="container">
           <div className="row">
@@ -74,7 +73,6 @@ export const BuyTicket = () => {
           </div>
         </div>
       </section>
-      {/* Buy Ticket End */}
     </>
   )
 }

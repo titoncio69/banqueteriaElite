@@ -31,15 +31,12 @@ export const GalleryPage = () => {
         parentMenu='Gallery'
         activeMenu="/Gallery"
       />
-      {/* SiteBreadcrumb */}
       <SiteBreadcrumb
         pageTitle="Galeria"
         pageName="Galeria"
         breadcrumbsImg={bannerbg}
       />
-      {/* SiteBreadcrumb */}
       <GalleryMain />
-      {/* <BrandOne /> */}
       <SlidingText />
       <BackToTop scroll={isVisible} />
       <Footer />

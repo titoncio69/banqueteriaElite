@@ -8,7 +8,6 @@ export const SiteBreadcrumb = (props: any) => {
 
     return (
         <>
-            {/*Page Header Start*/}
             <section className="page-header">
                 <div
                     className="page-header__bg"
@@ -21,7 +20,6 @@ export const SiteBreadcrumb = (props: any) => {
                     </div>
                 </div>
             </section>
-            {/*Page Header End*/}
         </>
     )
 }

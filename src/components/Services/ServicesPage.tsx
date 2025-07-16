@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 export const ServicesPage = ({ services }: any) => {
   return (
     <>
-      {/* Services Page Start */}
       <section className="services-page">
         <div className="container">
           <div className="row">
@@ -22,18 +21,12 @@ export const ServicesPage = ({ services }: any) => {
                       )}
                   </div>
                   <h3 className="services-one__title">
-                    {/* <Link to={service.link}>{service.title}</Link> */}
-                    {/* Mantén <Link> si apuntará a una ruta interna */}
                     {service.link ? (
                       <Link to={service.link}>{service.title}</Link>
                     ) : (
                       service.title
                     )}
                   </h3>
-                  {/* <p className="services-one__text">
-                    {service.description}
-                  </p> */}
-                  {/* 🎯 1. Mostrar lista si description es array */}
                   {Array.isArray(service.description) ? (
                     <ul className="services-one__text">
                       {service.description.map((item: any, i: any) => (
@@ -43,13 +36,6 @@ export const ServicesPage = ({ services }: any) => {
                   ) : (
                     <p className="services-one__text">{service.description}</p>
                   )}
-                  {/* <Link
-                    to={service.link}
-                    className="services-one__read-more"
-                  >
-                    Ver Catalogo<span className="icon-arrow-right"></span>
-                  </Link> */}
-                  {/* 🎯 2. Botón que abre el PDF en nueva pestaña */}
                   {service.pdf ? (
                     <a
                       href={service.pdf}
@@ -70,7 +56,6 @@ export const ServicesPage = ({ services }: any) => {
           </div>
         </div>
       </section>
-      {/* Services Page End */}
     </>
   )
 }

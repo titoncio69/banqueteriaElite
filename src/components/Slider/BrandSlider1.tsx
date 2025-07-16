@@ -17,84 +17,74 @@ const swiperOptions = {
     },
     autoplay: { delay: 1000 },
 
-   breakpoints: {
-            0: {
-                  spaceBetween: 30,
-                  slidesPerView: 1
-              },
-              375: {
-                  spaceBetween: 30,
-                  slidesPerView: 1
-              },
-              575: {
-                  spaceBetween: 30,
-                  slidesPerView: 2
-              },
-              767: {
-                  spaceBetween: 50,
-                  slidesPerView: 3
-              },
-              991: {
-                  spaceBetween: 50,
-                  slidesPerView: 4
-              },
-              1199: {
-                  spaceBetween: 100,
-                  slidesPerView: 5
-              },
-              
-          
+    breakpoints: {
+        0: {
+            spaceBetween: 30,
+            slidesPerView: 1
+        },
+        375: {
+            spaceBetween: 30,
+            slidesPerView: 1
+        },
+        575: {
+            spaceBetween: 30,
+            slidesPerView: 2
+        },
+        767: {
+            spaceBetween: 50,
+            slidesPerView: 3
+        },
+        991: {
+            spaceBetween: 50,
+            slidesPerView: 4
+        },
+        1199: {
+            spaceBetween: 100,
+            slidesPerView: 5
+        },
+
+
     }
 }
 
 export const BrandSlider1 = () => {
-  return (
-    <>
+    return (
+        <>
 
             <Swiper {...swiperOptions} className="thm-swiper__slider swiper-container">
-            <div className="swiper-wrapper">
+                <div className="swiper-wrapper">
                     <SwiperSlide className="swiper-slide">
                         <img src={brandImg1} alt="" />
                     </SwiperSlide>
-                    {/* /.swiper-slide */}
                     <SwiperSlide className="swiper-slide">
                         <img src={brandImg2} alt="" />
                     </SwiperSlide>
-                    {/* /.swiper-slide */}
                     <SwiperSlide className="swiper-slide">
                         <img src={brandImg3} alt="" />
                     </SwiperSlide>
-                    {/* /.swiper-slide */}
                     <SwiperSlide className="swiper-slide">
                         <img src={brandImg4} alt="" />
                     </SwiperSlide>
-                    {/* /.swiper-slide */}
                     <SwiperSlide className="swiper-slide">
                         <img src={brandImg5} alt="" />
                     </SwiperSlide>
-                    {/* /.swiper-slide */}
                     <SwiperSlide className="swiper-slide">
                         <img src={brandImg1} alt="" />
                     </SwiperSlide>
-                    {/* /.swiper-slide */}
                     <SwiperSlide className="swiper-slide">
                         <img src={brandImg2} alt="" />
                     </SwiperSlide>
-                    {/* /.swiper-slide */}
                     <SwiperSlide className="swiper-slide">
                         <img src={brandImg3} alt="" />
                     </SwiperSlide>
-                    {/* /.swiper-slide */}
                     <SwiperSlide className="swiper-slide">
                         <img src={brandImg4} alt="" />
                     </SwiperSlide>
-                    {/* /.swiper-slide */}
                     <SwiperSlide className="swiper-slide">
                         <img src={brandImg5} alt="" />
                     </SwiperSlide>
-                    {/* /.swiper-slide */}
                 </div>
             </Swiper>
         </>
-  )
+    )
 }

@@ -37,7 +37,6 @@ const swiperOptions: any = {
 export const Banner = () => {
   return (
     <>
-    {/* banner-one */}
     <section id='th-home' className="main-slider">
             <Swiper {...swiperOptions} className="swiper-container thm-swiper__slider">
             <div className="swiper-wrapper">
@@ -167,7 +166,6 @@ export const Banner = () => {
           <div className="swiper-pagination" id="main-slider-pagination" />
 
         </section>
-        {/* banner-one */}
     </>
   )
 }

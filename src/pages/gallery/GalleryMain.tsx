@@ -68,9 +68,9 @@ export const GalleryMain = () => {
                   <div className="gallery-one__content">
                     <div className="gallery-one__sub-title-box">
                       <div className="gallery-one__sub-title-shape"></div>
-                      <p className="gallery-one__sub-title">{group.subtitle}</p>
+                      {/* <p className="gallery-one__sub-title">{group.subtitle}</p> */}
+                      <h4 className="gallery-one__title">{group.title}</h4>
                     </div>
-                    <h4 className="gallery-one__title">{group.title}</h4>
                   </div>
                 </div>
               </div>
@@ -80,7 +80,7 @@ export const GalleryMain = () => {
       </div>
 
       <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
-        <DialogTitle 
+        <DialogTitle
           // sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
           sx={{
             display: 'flex',
@@ -89,7 +89,7 @@ export const GalleryMain = () => {
             backgroundColor: '#111', // fondo oscuro
             color: '#fff',           // texto claro
           }}
-          >
+        >
           <Typography variant="h6">{selectedGroup?.title}</Typography>
           <IconButton onClick={handleClose} sx={{ color: 'white' }}>
             <CloseIcon />
@@ -118,7 +118,6 @@ export const GalleryMain = () => {
         </DialogContent>
       </Dialog>
 
-      {/* Lightbox */}
       <Dialog
         open={lightboxOpen}
         onClose={handleLightboxClose}
@@ -184,28 +183,28 @@ export const GalleryMain = () => {
                 borderRadius: '8px',
                 transition: 'transform 0.3s',
               }}
-              // onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
-              // onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+            // onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+            // onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
             />
           )}
           {selectedGroup && (
-  <Typography
-    variant="subtitle2"
-    sx={{
-      color: 'white',
-      position: 'absolute',
-      bottom: 16,
-      left: '50%',
-      transform: 'translateX(-50%)',
-      backgroundColor: 'rgba(0, 0, 0, 0.4)',
-      px: 2,
-      py: 0.5,
-      borderRadius: 2,
-    }}
-  >
-    Imagen {activeIndex + 1} de {selectedGroup.images.length}
-  </Typography>
-)}
+            <Typography
+              variant="subtitle2"
+              sx={{
+                color: 'white',
+                position: 'absolute',
+                bottom: 16,
+                left: '50%',
+                transform: 'translateX(-50%)',
+                backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                px: 2,
+                py: 0.5,
+                borderRadius: 2,
+              }}
+            >
+              Imagen {activeIndex + 1} de {selectedGroup.images.length}
+            </Typography>
+          )}
         </Box>
       </Dialog>
     </section>

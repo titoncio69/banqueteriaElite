@@ -706,6 +706,36 @@ ul {
   z-index: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .main-menu__wrapper-inner {
+    padding: 0 20px;
+    flex-wrap: nowrap;
+  }
+
+  .main-menu__left,
+  .main-menu__main-menu-box {
+    width: auto;
+  }
+
+  .main-menu__logo img {
+    max-height: 50px;
+  }
+
+  .main-menu__main-menu-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .mobile-nav__toggler {
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+}
+
 .main-menu__wrapper-inner:before {
   content: "";
   position: absolute;
@@ -2618,7 +2648,7 @@ ul {
 
 @keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(5%);
   }
   100% {
     transform: translateX(-100%);
@@ -2628,7 +2658,8 @@ ul {
 .marquee_mode {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 90s linear infinite;
+  animation: marquee 60s linear infinite;
+  will-change: transform;
 }
 
 .sliding-text__title img {
@@ -12338,7 +12369,58 @@ ul {
   .main-menu-two .main-menu__search {
     margin-left: 30px;
   }
+}
 
+@media (max-width: 768px) {
+  .main-slider__img {
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    transform: none !important;
+    opacity: 1 !important;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
 
+  .main-slider__img img {
+    width: 90%;
+    height: auto;
+    border-radius: 12px;
+    border: none;
+    max-width: 100%;
+    object-fit: cover;
+  }
 
+  .main-slider .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .main-slider__content {
+    text-align: center;
+  }
+
+  .footer-widget__contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-widget__contact-list .icon {
+    min-width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-widget__contact-list .text {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
 }

@@ -14,7 +14,6 @@ export const Sidebar = ({ isSidebar, handleSidebar }: any) => {
                             <div className="content-inner">
                                 <div className="logo">
                                     <Link to="/">
-                                        {/* <img src={logo} alt="Logo" /> */}
                                     </Link>
                                 </div>
                                 <div className="content-box">

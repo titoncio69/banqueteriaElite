@@ -30,13 +30,11 @@ export const AboutPage = () => {
         parentMenu='about'
         activeMenu="/about"
       />
-      {/* SiteBreadcrumb */}
       <SiteBreadcrumb
         pageTitle="Nosotros"
         pageName="Nosotros"
         breadcrumbsImg={bannerbg}
       />
-      {/* SiteBreadcrumb */}
       <AboutMain />
       <BackToTop scroll={isVisible} />
       <Footer />

@@ -87,10 +87,8 @@ const swiperOptions: any = {
 export const BrandOne = () => {
   return (
     <>
-      {/* Brand One Start */}
       <section className="brand-one">
         <div className="container">
-          {/* Swiper Slider */}
           <Swiper {...swiperOptions}>
             {brandData.map((brand, index) => (
               <SwiperSlide key={index}>
@@ -104,7 +102,6 @@ export const BrandOne = () => {
           </Swiper>
         </div>
       </section>
-      {/* Brand One End */}
     </>
   )
 }
