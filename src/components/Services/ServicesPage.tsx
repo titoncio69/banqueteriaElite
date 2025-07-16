@@ -16,7 +16,7 @@ export const ServicesPage = ({ services }: any) => {
                 <div className="services-one__single h-100 d-flex flex-column">
                   <div className="services-one__icon">
                       {service.image ? (
-                        <img src={service.image} alt={service.title} style={{ width: 90, height: 90, objectFit: 'contain' }} />
+                        <img src={service.image} alt={service.title} style={{ width: 218, height: 128 ,objectFit: 'contain' }} />
                       ) : (
                         <span className={service.icon}></span>
                       )}
