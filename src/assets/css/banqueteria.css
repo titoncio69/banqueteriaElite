@@ -2058,7 +2058,7 @@ ul {
 
  a.split-btn {
   position: relative;
-  letter-spacing: 0.90em;
+  letter-spacing: 0.99em;
   margin: 0 auto;
   padding: 1rem 2.5rem;
   background: transparent;
@@ -7137,11 +7137,15 @@ ul {
 # Page Header
 --------------------------------------------------------------*/
 .page-header {
-  position: relative;
-  display: block;
-  padding: 315px 0 240px;
+    position: relative;
+  width: 100%;
+  min-height: 700px;
+  height: 50vh;      
   overflow: hidden;
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .page-header__shape-1 {

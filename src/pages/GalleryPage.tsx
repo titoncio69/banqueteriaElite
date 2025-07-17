@@ -4,7 +4,7 @@ import { SiteBreadcrumb } from "../components/Common/Breadcumb/SiteBreadcrumb";
 import { BackToTop } from "../components/elements/BackToTop";
 import { Footer } from "../components/Layout/Footer/Footer";
 import navImg1 from '../assets/images/resources/logo-1.png';
-import bannerbg from '../assets/images/backgrounds/page-header-bg.jpg';
+import bannerbg from '../assets/images/backgrounds/video-page-header.mp4';
 import { GalleryMain } from "./gallery/GalleryMain";
 import { SlidingText } from "./home/SlidingText";
 
@@ -34,7 +34,8 @@ export const GalleryPage = () => {
       <SiteBreadcrumb
         pageTitle="Galeria"
         pageName="Galeria"
-        breadcrumbsImg={bannerbg}
+        breadcrumbsVideo={bannerbg}
+        scrollTo="galeria"
       />
       <GalleryMain />
       <SlidingText />

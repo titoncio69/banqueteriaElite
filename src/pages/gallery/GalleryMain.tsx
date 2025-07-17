@@ -52,7 +52,7 @@ export const GalleryMain = () => {
   };
 
   return (
-    <section className="gallery-one">
+    <section className="gallery-one" id="galeria">
       <div className="container">
         <div className="row masonary-layout">
           {galleryData.map((group) => (

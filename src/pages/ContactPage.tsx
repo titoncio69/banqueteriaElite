@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import bannerbg from '../assets/images/backgrounds/page-header-bg.jpg';
+import bannerbg from '../assets/images/backgrounds/video-page-header.mp4';
 import navImg1 from '../assets/images/resources/logo-1.png';
 import { HeaderStyleOne } from "../components/Layout/Header/HeaderStyleOne";
 import { SiteBreadcrumb } from "../components/Common/Breadcumb/SiteBreadcrumb";
@@ -34,7 +34,8 @@ export const ContactPage = () => {
             <SiteBreadcrumb
                 pageTitle="Contactanos"
                 pageName="Contactanos"
-                breadcrumbsImg={bannerbg}
+                breadcrumbsVideo={bannerbg}
+                scrollTo="contacto"
             />
             <ContactMain />
             <SlidingText />

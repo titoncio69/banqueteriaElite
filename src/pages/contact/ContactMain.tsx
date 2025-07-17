@@ -46,7 +46,7 @@ export const ContactMain = () => {
 
   return (
     <>
-      <section className="contact-one">
+      <section className="contact-one" id="contacto">
         <div className="container">
           <div className="contact-one__inner">
             <h3 className="contact-one__title">Escribenos</h3>
