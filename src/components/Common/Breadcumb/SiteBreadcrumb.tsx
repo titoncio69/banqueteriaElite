@@ -1,3 +1,4 @@
+    
 
 export const SiteBreadcrumb = (props: any) => {
     const { pageTitle, breadcrumbsImg } = props;
@@ -15,8 +16,11 @@ export const SiteBreadcrumb = (props: any) => {
                 <div>
                     <div className="page-header__inner">
                         <h2>{pageTitle ? pageTitle : 'Breadcrumbs'}</h2>
-                        <div className="thm-breadcrumb__box">
+
+                        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '24px' }}>
+                            <a href="#nosotros" className="split-btn">↓ Ver más</a>
                         </div>
+
                     </div>
                 </div>
             </section>
