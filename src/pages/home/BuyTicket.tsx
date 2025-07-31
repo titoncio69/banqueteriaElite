@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import ticketImg from '../../assets/images/resources/buy-ticket-img.jpg';
 
 export const BuyTicket = () => {
-    // State for dynamic content
   const [ticketContent] = useState({
     address: "Mirpur 01 Road N 12 Dhaka Bangladesh",
     timing: "10 Am To 10 Pm 20 April 2024",
@@ -17,62 +17,67 @@ export const BuyTicket = () => {
   });
 
   return (
-    <>
-      <section className="buy-ticket">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-6">
-              <div
-                className="buy-ticket__left wow fadeInLeft"
-                data-wow-delay="100ms"
-              >
-                <ul className="buy-ticket__address list-unstyled">
-                  <li>
-                    <div className="icon">
-                      <span className="icon-clock"></span>
-                    </div>
-                    <div className="text">
-                      <p>{ticketContent.address}</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="icon">
-                      <span className="icon-pin"></span>
-                    </div>
-                    <div className="text">
-                      <p>{ticketContent.timing}</p>
-                    </div>
-                  </li>
-                </ul>
-                <h3 className="buy-ticket__title">{ticketContent.title}</h3>
-                <p className="buy-ticket__text">{ticketContent.description}</p>
-                <div className="buy-ticket__btn-box">
-                  {ticketContent.buttons.map((button) => (
-                    <Link
-                      key={button.id}
-                      to={button.link}
-                      className={`${button.class} thm-btn`}
-                    >
-                      {button.text}
-                      <span className="icon-arrow-right"></span>
-                    </Link>
-                  ))}
-                </div>
+    <section className="buy-ticket">
+      <div className="container">
+        <div className="row">
+          <motion.div
+            className="col-xl-6"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="buy-ticket__left">
+              <ul className="buy-ticket__address list-unstyled">
+                <li>
+                  <div className="icon">
+                    <span className="icon-clock"></span>
+                  </div>
+                  <div className="text">
+                    <p>{ticketContent.address}</p>
+                  </div>
+                </li>
+                <li>
+                  <div className="icon">
+                    <span className="icon-pin"></span>
+                  </div>
+                  <div className="text">
+                    <p>{ticketContent.timing}</p>
+                  </div>
+                </li>
+              </ul>
+              <h3 className="buy-ticket__title">{ticketContent.title}</h3>
+              <p className="buy-ticket__text">{ticketContent.description}</p>
+              <div className="buy-ticket__btn-box">
+                {ticketContent.buttons.map((button) => (
+                  <Link
+                    key={button.id}
+                    to={button.link}
+                    className={`${button.class} thm-btn`}
+                  >
+                    {button.text}
+                    <span className="icon-arrow-right"></span>
+                  </Link>
+                ))}
               </div>
             </div>
-            <div className="col-xl-6">
-              <div
-                className="buy-ticket__right wow fadeInRight"
-                data-wow-delay="300ms"
-              >
-                <div className="buy-ticket__img">
-                  <img src={ticketImg} alt="" />
-                </div>
+          </motion.div>
+
+          <motion.div
+            className="col-xl-6"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <div className="buy-ticket__right">
+              <div className="buy-ticket__img">
+                <img src={ticketImg} alt="Buy Ticket" />
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-      </section>
-    </>
-  )
-}
+      </div>
+    </section>
+  );
+};

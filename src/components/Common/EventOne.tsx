@@ -1,25 +1,52 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const EventOne = ({ tagline, title, points, imageUrl, imageUrl2 }: any) => {
   return (
-    <section className="event-one event-three" >
-      <div className="container valores-container" >
+    <section className="event-one event-three">
+      <div className="container valores-container">
         <div className="event-one__contenido-grid">
-          <div className="event-one__info">
-            <div className="event-one__inner wow fadeInUp" data-wow-delay="300ms">
+          <motion.div
+            className="event-one__info"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="event-one__inner">
               <div className="event-one__top">
-
                 <div className="section-title text-left">
                   <div className="section-title__tagline-box">
-                    <span className="section-title__tagline" data-aos="fade-right" data-aos-duration="1000">{tagline}</span>
-
+                    <motion.span
+                      className="section-title__tagline"
+                      initial={{ opacity: 0, x: -30 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 1 }}
+                      viewport={{ once: true }}
+                    >
+                      {tagline}
+                    </motion.span>
                   </div>
-                  <h2 className="section-title__title">{title}</h2>
+                  <motion.h2
+                    className="section-title__title"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ duration: 1.2 }}
+                    viewport={{ once: true }}
+                  >
+                    {title}
+                  </motion.h2>
                 </div>
               </div>
-              <ul className="list-unstyled event-one__points" >
+              <ul className="list-unstyled event-one__points">
                 {points.map((point: any, index: any) => (
-                  <li key={index} >
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
                     <div className="icon icono-que-gira" style={{ marginBottom: '20px' }}>
                       {point.image ? (
                         <img
@@ -36,18 +63,24 @@ export const EventOne = ({ tagline, title, points, imageUrl, imageUrl2 }: any) =
                         <Link to="#">{point.heading}</Link>
                       </h4>
                     </div>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
-
             </div>
-          </div>
-          <div className="event-one__img-box">
-            <img src={imageUrl} alt="Event" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" />
-            <img src={imageUrl2} alt="Event" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" />
-          </div>
+          </motion.div>
+
+          <motion.div
+            className="event-one__img-box"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <img src={imageUrl} alt="Event" />
+            <img src={imageUrl2} alt="Event" />
+          </motion.div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
