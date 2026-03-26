@@ -37,7 +37,6 @@ const swiperOptions: any = {
 export const Banner = () => {
   return (
     <>
-    {/* banner-one */}
     <section id='th-home' className="main-slider">
             <Swiper {...swiperOptions} className="swiper-container thm-swiper__slider">
             <div className="swiper-wrapper">
@@ -66,13 +65,15 @@ export const Banner = () => {
                       <div className="main-slider__content">
                         <p className="main-slider__sub-title">PRODUCTORA Y BANQUETERIA ELITE</p>
                         <h2 className="main-slider__title">
-                        UNA EXPERIENCIA DE <br />SABORES   <span> </span>
+                        UNA EXPERIENCIA  <br />DE SABORES   <span> </span>
                         </h2>
-                        <p className="main-slider__text">
-                        Desde nuestra fundación hemos sido un referente en el servicio, ofreciendo producciones y <br /> 
-                        soluciones gastronómicas de alta calidad para eventos de todo tipo y en distintas locaciones. <br/>  
-                        A lo largo de estos años, nos hemos destacado por nuestra dedicación al detalle, <br/> 
-                        compromiso con la excelencia y una pasión constante por innovar. 
+                        <p className="slider__text">
+                        Desde nuestra fundación hemos sido un referente en el servicio, <br /> 
+                        ofreciendo producciones y soluciones gastronómicas de alta calidad <br/> 
+                        para eventos de todo tipo y en distintas locaciones.<br/>   
+                        A lo largo de estos años, nos hemos destacado por nuestra   
+                        dedicación <br/>al detalle, compromiso con la excelencia y una pasión <br/>
+                        constante por innovar. 
                         </p>
                       </div>
                     </div>
@@ -105,14 +106,15 @@ export const Banner = () => {
                       <div className="main-slider__content">
                         <p className="main-slider__sub-title">PRODUCTORA Y BANQUETERIA ELITE</p>
                         <h2 className="main-slider__title">
-                        UNA EXPERIENCIA DE <br />SABORES   <span> </span>
+                        UNA EXPERIENCIA <br /> DE SABORES   <span> </span>
                         </h2>
-                        <p className="main-slider__text">
-                        En 2025, celebramos más de una década de éxito y crecimiento continuo. Hemos expandido <br /> 
-                        nuestra oferta, ampliando nuestro abanico de productos y servicios mediante experiencias <br />
-                        que reflejan nuestra evolución como empresa. Nuestro objetivo es hacer de cada celebración <br />
-                        una ocasión inolvidable, brindando atención al detalle, perfección en cada servicio y un <br /> 
-                        ambiente de calidez y cordialidad en todo momento.
+                        <p className="slider__text">
+                        En 2025, celebramos más de una década de éxito y crecimiento <br /> 
+                        continuo. Hemos expandido nuestra oferta, ampliando nuestro abanico <br />
+                        de productos y servicios mediante experiencias que reflejan nuestra <br />
+                        evolución como empresa. Nuestro objetivo es hacer de cada celebración <br />
+                        una ocasión inolvidable, brindando atención al detalle, perfección en <br />  
+                        cada servicio y un ambiente de calidez y cordialidad en todo momento.
                         </p>
                       </div>
                     </div>
@@ -145,12 +147,13 @@ export const Banner = () => {
                       <div className="main-slider__content">
                         <p className="main-slider__sub-title">PRODUCTORA Y BANQUETERIA ELITE</p>
                         <h2 className="main-slider__title">
-                        UNA EXPERIENCIA DE <br />SABORES   <span> </span>
+                        UNA EXPERIENCIA <br /> DE SABORES   <span> </span>
                         </h2>
-                        <p className="main-slider__text">
-                        Nos sentimos orgullosos de nuestra trayectoria, de los lazos que hemos formado con <br /> 
-                        grandes clientes y de la confianza que han depositado en nosotros a lo largo de los años. <br />
-                        ¡En PRODUCTORA Y BANQUETERIA ELITE, estamos listos para seguir <br />creando momentos memorables! 
+                        <p className="slider__text">
+                        Nos sentimos orgullosos de nuestra trayectoria, de los lazos que hemos <br />
+                        formado con grandes clientes y de la confianza que han depositado en <br />
+                        nosotros a lo largo de los años. <br />
+                        PRODUCTORA Y BANQUETERIA ELITE, estamos listos para seguir <br />creando momentos memorables! 
                         </p>
                       </div>
                     </div>
@@ -163,7 +166,6 @@ export const Banner = () => {
           <div className="swiper-pagination" id="main-slider-pagination" />
 
         </section>
-        {/* banner-one */}
     </>
   )
 }

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import bannerbg from '../assets/images/backgrounds/page-header-bg.jpg';
+import bannerbg from '../assets/images/backgrounds/video-page-header.mp4';
 import navImg1 from '../assets/images/resources/logo-1.png';
 import { HeaderStyleOne } from "../components/Layout/Header/HeaderStyleOne";
 import { SiteBreadcrumb } from "../components/Common/Breadcumb/SiteBreadcrumb";
 import { BackToTop } from "../components/elements/BackToTop";
 import { Footer } from "../components/Layout/Footer/Footer";
 import { ContactMain } from "./contact/ContactMain";
+import { SlidingText } from "./home/SlidingText";
 
 export const ContactPage = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -30,14 +31,14 @@ export const ContactPage = () => {
                 parentMenu='contact'
                 activeMenu="/contact"
             />
-            {/* SiteBreadcrumb */}
             <SiteBreadcrumb
                 pageTitle="Contactanos"
                 pageName="Contactanos"
-                breadcrumbsImg={bannerbg}
+                breadcrumbsVideo={bannerbg}
+                scrollTo="contacto"
             />
-            {/* SiteBreadcrumb */}
             <ContactMain />
+            <SlidingText />
             <BackToTop scroll={isVisible} />
             <Footer />
         </>

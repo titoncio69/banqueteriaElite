@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { HeaderStyleOne } from "../components/Layout/Header/HeaderStyleOne";
 import navImg1 from '../assets/images/resources/logo-1.png';
-import bannerbg from '../assets/images/backgrounds/page-header-bg.jpg';
+import bannerbg from '../assets/images/backgrounds/video-page-header.mp4';
 import { SiteBreadcrumb } from "../components/Common/Breadcumb/SiteBreadcrumb";
 import { BackToTop } from "../components/elements/BackToTop";
 import { Footer } from "../components/Layout/Footer/Footer";
@@ -30,13 +30,12 @@ export const AboutPage = () => {
         parentMenu='about'
         activeMenu="/about"
       />
-      {/* SiteBreadcrumb */}
       <SiteBreadcrumb
         pageTitle="Nosotros"
         pageName="Nosotros"
-        breadcrumbsImg={bannerbg}
+        breadcrumbsVideo={bannerbg}
+        scrollTo="nosotros"
       />
-      {/* SiteBreadcrumb */}
       <AboutMain />
       <BackToTop scroll={isVisible} />
       <Footer />

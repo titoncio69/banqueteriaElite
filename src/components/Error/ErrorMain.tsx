@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 export const ErrorMain = () => {
     return (
         <>
-            {/*Error Page Start*/}
             <section className="error-page">
                 <div className="container">
                     <div className="row">
@@ -34,7 +33,6 @@ export const ErrorMain = () => {
                     </div>
                 </div>
             </section>
-            {/*Error Page End*/}
         </>
     )
 }

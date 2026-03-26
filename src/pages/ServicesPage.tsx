@@ -4,8 +4,9 @@ import { SiteBreadcrumb } from "../components/Common/Breadcumb/SiteBreadcrumb";
 import { BackToTop } from "../components/elements/BackToTop";
 import { Footer } from "../components/Layout/Footer/Footer";
 import navImg1 from '../assets/images/resources/logo-1.png';
-import bannerbg from '../assets/images/backgrounds/page-header-bg.jpg';
+import bannerbg from '../assets/images/backgrounds/video-page-header.mp4';
 import { ServicesMain } from "./services/ServicesMain";
+import { SlidingText } from "./home/SlidingText";
 
 export const ServicesPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -30,14 +31,14 @@ export const ServicesPage = () => {
             parentMenu='services'
             activeMenu="/services"
         />
-        {/* SiteBreadcrumb */}
         <SiteBreadcrumb
             pageTitle="Productos y Servicios"
             pageName="Productos y Servicios"
-            breadcrumbsImg={bannerbg}
+            breadcrumbsVideo={bannerbg}
+            scrollTo="servicio"
         />
-        {/* SiteBreadcrumb */}
         <ServicesMain />
+        <SlidingText />
         <BackToTop scroll={isVisible} />
         <Footer />
     </>
